@@ -1,11 +1,11 @@
+import React from 'react';
+import Navi from "./components/Navi/Navi";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      
-      <h1>Henlo</h1>
-    
+    <Navi></Navi>
     </div>
   );
 }
