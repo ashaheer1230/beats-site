@@ -12,8 +12,8 @@ function App() {
   const [tempo, setTempo] = useState(147);
   const [key, setKey] = useState('E');
   const [scale, setScale] = useState('Minor');
-  const [tempFile, setTempFile] = useState('https://drive.google.com/file/d/1LXvkMW8OzqHEjIHvUoRCvJl0f8Cw8kPz/view?usp=sharing')
-*/
+  const [tempFile, setTempFile] = useState('1LXvkMW8OzqHEjIHvUoRCvJl0f8Cw8kPz');*/
+
   useEffect(() => {
 
     Axios.get("http://localhost:3001/api/get").then((response) => {
@@ -42,13 +42,12 @@ function App() {
       
       return (
         <audio key={val.Name} controls>
-          <source src={val.musicFile} type="audio/mpeg"></source>
-          <source src={"https://drive.google.com/file/d/1LXvkMW8OzqHEjIHvUoRCvJl0f8Cw8kPz/view?usp=sharing"} type="audio/wav"></source>
-          <source src={"https://drive.google.com/file/d/1LXvkMW8OzqHEjIHvUoRCvJl0f8Cw8kPz/view?usp=sharing"} type="audio/ogg"></source>
-          <p>Wont work</p>
+          <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/mpeg"></source>
+          <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/wav"></source>
+          <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/ogg"></source>
+          <p>Your browser does not support audio playback</p>
         </audio>
-      )
-    })}
+   )})}
     </div>
   );
 }

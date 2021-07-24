@@ -34,8 +34,8 @@ app.get('/api/get', (req, res) => {
     const sqlUpload = "INSERT INTO beatsLinks VALUES (?, ?, ?, ?, ?);";
     db.query(sqlUpload, [Name, Tempo, Key, Scale, musicFile], (err, result) => {
     })
-})
-*/
+})*/
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
