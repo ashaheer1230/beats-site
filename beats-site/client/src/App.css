@@ -5,20 +5,27 @@
   font-family: 'Manrope', sans-serif;
 }
 
-.audioSlider {
-    
+.emptySpace {
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+    color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0)
 }
 
 .column-left {
     float: left;
+    position: absolute;
     width: 30%;
     height: "100%vh";
+    display: flex;
+    flex-direction: column;
 }
 
 .column-right {
     float: right;
     width: 70%;
-    height: "100%vh";
+    height: 100vh;
 }
 
 .row:after {
@@ -31,7 +38,10 @@
 .filterSection {
     width: 100%;
     height: "100%vh";
-    background: rgb(228, 228, 228);
+    background: rgb(0,0,0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
 }
 
 .beatCard {
@@ -43,7 +53,7 @@
     height: "100%vh";
     padding: 10px;
     text-align: left;
-    border: solid 2px black;
+    border: solid 3px black;
     overflow: auto;
 }
 
