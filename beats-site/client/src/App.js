@@ -1,15 +1,40 @@
 import React, {useState, useEffect} from 'react';
-import Navi from "./components/Navi/Navi";
+import './Navi.css';
 import './App.css';
 import Axios from 'axios';
 import musicImg from './musicImg.jpg';
-import { Button } from './Button.js'
+import { Button } from './Button.js';
+import { Pages } from './Pages';
 
 //const Spacer = require('react-spacer');
 
-function App() {
+function App(props) {
 
   const [allBeats, setAllBeats] = useState([]);
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  }
+
+  const switchPage = (index) => {
+    if (index === 0){
+
+        props.history.push(`/`);
+        window.location.reload(false);
+
+    } else if ( index === 1) {
+        
+        props.history.push(`/about`);
+        window.location.reload(false);
+
+    } else {
+
+        props.history.push(`/contact`);
+        window.location.reload(false);
+
+    }
+  }
 
   //Variables used to manually input music to DB
   /*const [filename, setfilename] = useState("Waves");
@@ -17,6 +42,7 @@ function App() {
   const [key, setKey] = useState('E');
   const [scale, setScale] = useState('Minor');
   const [tempFile, setTempFile] = useState('1KCYiJMSK4TW8X8-1jmp6nu8OkAzwzoq_');*/
+  
   useEffect(() => {
 
     Axios.get("http://localhost:3001/api/get").then((response) => {
@@ -41,7 +67,23 @@ function App() {
     <div className="App">
       
       <div>
-        < Navi />
+          <nav className="NavbarItems">
+              <h1 className="navbar-logo">SHERU<i className="fas fa-record-vinyl"></i></h1>
+               <div className="menu-icon" onClick={() => handleClick()}>
+                   <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+              </div>
+              <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+                      {Pages.map((item, index) => {
+                          return (
+                              <li key={index}>
+                                  <Button className={item.cName} onClick={() => switchPage(index)}>
+                                   {item.title}
+                                   </Button>
+                              </li>
+                           )
+                      })}
+               </ul>
+          </nav>
       </div>
 
       <div className="row">
@@ -82,9 +124,11 @@ function App() {
                 </div>
 
                 <div flex={1}>
+
                   <h2 className="cardTextTitle">{val.Name}</h2>
                   <h5 className="cardText">{val.Tempo}bpm</h5>
                   <h5 className="cardText">{val.Key} {val.Scale}</h5>
+
                   <audio className="audioSlider" key={val.Name} controls controlsList="nodownload">
                     <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/mpeg"></source>
                     <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/wav"></source>
@@ -96,6 +140,8 @@ function App() {
                 
               </div>
           )})}
+
+
         </div>
         
       </div>

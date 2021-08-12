@@ -1,18 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Pages } from './Pages'
 import './Navi.css'
 
-class Navi extends React.Component {
+import {
+    Button
+  } from '@material-ui/core/';
 
-    state = { clicked: false}
+//class Navi extends React.Component {
 
-    handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
-    }
+    
+    export default function Navi(props) {
 
-    render() {
-        return (
-            <nav className="NavbarItems">
+        const [clicked, setClicked] = useState(false);
+
+        const handleClick = () => {
+            setClicked(!clicked);
+        }
+
+        const switchPage = (index) => {
+            if (index === 0){
+
+                props.history.push(`/`);
+                window.location.reload(false);
+
+            } else if ( index === 1) {
+                
+                props.history.push(`/about`);
+                window.location.reload(false);
+
+            } else {
+
+                props.history.push(`/contact`);
+                window.location.reload(false);
+
+            }
+        }
+
+        /*
+         <nav className="NavbarItems">
                 <h1 className="navbar-logo">SHERU<i className="fas fa-record-vinyl"></i></h1>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -29,8 +54,44 @@ class Navi extends React.Component {
                         })}
                 </ul>
             </nav>
-        );
-    }
-}
+        */
 
-export default Navi
+
+        return (
+            <nav className="NavbarItems">
+                <h1 className="navbar-logo">SHERU<i className="fas fa-record-vinyl"></i></h1>
+                <div className="menu-icon" onClick={() => handleClick()}>
+                    <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+                </div>
+                <ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
+                        {Pages.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <Button className={item.cName} onClick={() => switchPage(index)}>
+                                    {item.title}
+                                    </Button>
+                                </li>
+                            )
+                        })}
+                </ul>
+            </nav>
+        );
+    
+
+    }
+
+    
+
+
+    /*state = { clicked: false}
+
+    handleClick = () => {
+        this.setState({clicked: !this.state.clicked})
+    }*/
+
+    //render() {
+        
+    //}
+//}
+
+//export default Navi
