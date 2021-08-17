@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Axios from 'axios';
 import { Button } from './Button.js';
 import { Pages } from './Pages';
 
@@ -60,20 +59,24 @@ export default function Contact (props) {
 
                 <div className="column-left">
                     <div className="filterSection">
-                        <br></br>
+                            <br></br>
 
-                        <h1>newTorontoMusic</h1>
+                            <h1 className="aboutTitles">newTorontoMusic</h1>
 
-                        <br></br>
-                        <br></br>
+                            <br></br>
+                            <br></br>
 
-                        <h4>newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
+                            <h4 className="aboutHeadings">newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
 
-                        <br></br>
+                            <br></br>
+                            <br/>
 
-                        <h2>Producers: </h2>
-                        <br></br>
-                        <h4> (Coming Soon) </h4>
+                            <br/>
+
+
+                            <h2 className="aboutTitles">Producers: </h2>
+                            <br></br>
+                            <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
 

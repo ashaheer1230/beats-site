@@ -89,27 +89,28 @@ function App(props) {
       <div className="row">
 
         <div className="column-left">
-          <div className="filterSection">
-            <br></br>
+                      <div className="filterSection">
+                        <br></br>
 
-            <h1>newTorontoMusic</h1>
+                        <h1 className="aboutTitles">newTorontoMusic</h1>
 
-            <br></br>
-            <br></br>
+                        <br></br>
+                        <br></br>
 
-            <h4>newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
+                        <h4 className="aboutHeadings">newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
 
-            <br></br>
+                        <br></br>
+                        <br/>
+                        <br/>
 
-            <h2>Producers: </h2>
-            <br></br>
-            <h4> (Coming Soon) </h4>
 
-          </div>
+                        <h2 className="aboutTitles">Producers: </h2>
+                        <br></br>
+                        <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
-          <div className="emptySpace">
+                    </div>
 
-          </div>
+
         </div>
 
         <div className="column-right">
@@ -140,7 +141,6 @@ function App(props) {
                 
               </div>
           )})}
-
 
         </div>
         

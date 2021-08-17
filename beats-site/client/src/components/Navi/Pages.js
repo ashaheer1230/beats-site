@@ -4,7 +4,7 @@ export const Pages = [
         cName: 'nav-links'
     },
     {
-        title: 'About Me',
+        title: 'About',
         cName: 'nav-links'
     },
     {

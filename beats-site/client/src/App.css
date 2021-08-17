@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Manrope', sans-serif;
+  overflow-x: hidden;
 }
 
 .emptySpace {
@@ -13,19 +14,63 @@
     background-color: rgb(0, 0, 0)
 }
 
+.emptySpaceAbout {
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+    color: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    background-color: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+}
+
 .column-left {
     float: left;
     position: absolute;
     width: 30%;
-    height: "100%vh";
     display: flex;
     flex-direction: column;
+    border-top: 2px white solid;
+    border-right: 2px white solid;
+    
 }
 
 .column-right {
     float: right;
     width: 70%;
     height: 100vh;
+}
+
+.column-rightAbout {
+    float: right;
+    width: 70%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.columnImg {
+    width: 35%;
+    float: left;
+    background: linear-gradient(90deg, rgba(7,4,88,255) 0, rgba(11,7,108,255) 100%);
+    color: rgb(255, 255, 255);
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columnInfo{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 50px;
+    padding-left: 10%;
+    border-top: 2px solid white;
+    float: right;
+    width: 65%;
+    background: linear-gradient(90deg, rgba(11,7,108,255) 0%, rgba(9,9,121,1) 25%, rgba(3,0,54,1) 100%);
+    color: rgb(255, 255, 255);
 }
 
 .row:after {
@@ -37,11 +82,49 @@
 
 .filterSection {
     width: 100%;
-    height: "100%vh";
+    height: 740px;
     background: rgb(0,0,0);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
+    overflow-wrap: break-word;
+}
+
+.hr-line {
+    border: 1px white solid;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.hr-line2 {
+    border: 1px white solid;
+    width: 487px;
+    border-radius: 20px;
+}
+
+.aboutHeadings {
+    color: #e8e8e8;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+.aboutTitles {
+    color: #fafafa;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
+}
+
+.aboutSection {
+    width: 100%;
+    height: "100%vh";
+    background: linear-gradient(90deg, rgba(6,5,88,255) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid black;
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
 }
 
 .beatCard {
@@ -53,7 +136,8 @@
     height: "100%vh";
     padding: 10px;
     text-align: left;
-    border: solid 3px black;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
     overflow: auto;
 }
 
@@ -73,4 +157,19 @@
     height: "100%vh";
     width: 42%;
     border-radius: 3%;
+}
+
+.aboutImg {
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.personalTextHeading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 36px;
+}
+
+.personalText {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 26px;
 }

@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Axios from 'axios';
 import { Button } from './Button.js';
 import { Pages } from './Pages';
+import musicImg from './musicImg.jpg';
 
 
 export default function About (props) {
@@ -62,29 +62,68 @@ export default function About (props) {
                     <div className="filterSection">
                         <br></br>
 
-                        <h1>newTorontoMusic</h1>
+                        <h1 className="aboutTitles">newTorontoMusic</h1>
 
                         <br></br>
                         <br></br>
 
-                        <h4>newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
+                        <h4 className="aboutHeadings">newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
 
                         <br></br>
+                        <br/>
+                        <br/>
 
-                        <h2>Producers: </h2>
+                        <h2 className="aboutTitles">Producers: </h2>
                         <br></br>
-                        <h4> (Coming Soon) </h4>
-
-                    </div>
-
-                    <div className="emptySpace">
+                        <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
                 </div>
 
-                <div className="column-right">
-                    
+                <div className="column-rightAbout">
 
+                    <div className="row">
+
+                        <div className="columnImg">
+                            <img src={musicImg} alt="Cant display" className="aboutImg">
+                            </img>
+
+                            <div className="emptySpaceAbout"/>
+
+                        </div>
+
+                        <div className="columnInfo">
+
+                                <br/>
+                                <p className="personalTextHeading">Sheru</p>
+                                <br/>
+                                <hr className="hr-line"></hr>
+                                <br/>
+                                <h3 className="personalText">Toronto</h3>
+                                <h3 className="personalText">20</h3>
+
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                <h1 className="personalTextHeading">Let the music speak for itself</h1>
+
+                                <br/>
+                                <hr className="hr-line2"></hr>
+                                <br/>
+
+                                <h3 className="className=personalText"></h3>
+                                <br/>
+                                <br/>
+
+                                <div className="emptySpaceAbout"> </div>
+
+                        </div>
+
+                    </div>
                     
                 </div>
                 
