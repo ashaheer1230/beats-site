@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import './App.css';
 import { Button } from './Button.js';
 import { Pages } from './Pages';
+import igLogo from './iglogo.png';
+import mailLogo from './mailimg.png';
+import beatstars from './beatstars.jpeg';
 
 
 export default function Contact (props) {
@@ -79,15 +82,23 @@ export default function Contact (props) {
                             <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
-
-                    <div className="emptySpace">
-
-                    </div>
                 </div>
 
-                <div className="column-right">
+                <div className="column-rightContact">
                     
+                    <h1 className="personalTextHeading">Contact for Inquiries/Pricing</h1>
+                    <br/>
+                    <h1 className="contactPrompt">(Press below to contact)</h1>
 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className="contactImgDiv">
+                    <img src={mailLogo} alt="prodsheru@gmail.com" className="contactImg"></img>
+                    <img src={igLogo} alt="Coming Soon" className="contactImg"></img>
+                    </div>
+                    
                     
                 </div>
                 

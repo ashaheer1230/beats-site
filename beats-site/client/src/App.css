@@ -46,6 +46,20 @@
     overflow-y: hidden;
 }
 
+.column-rightContact {
+    float: right;
+    width: 70%;
+    height: 100vh;
+    padding: 20px;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+    overflow-y: hidden;
+    background: rgb(3,0,54);
+    background: linear-gradient(90deg, rgba(7,4,88,255) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    border-top: 2px solid white;
+}
+
 .columnImg {
     width: 35%;
     float: left;
@@ -164,6 +178,15 @@
     border-bottom: 2px solid white;
 }
 
+.contactImg{
+    width: 40%;
+}
+
+.contactImgDiv {
+    display: inline;
+    padding: 10px;
+}
+
 .personalTextHeading {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 36px;
@@ -172,4 +195,8 @@
 .personalText {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 26px;
+}
+.contactPrompt {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
 }

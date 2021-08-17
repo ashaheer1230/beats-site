@@ -114,9 +114,6 @@ export default function About (props) {
                                 <br/>
                                 <hr className="hr-line2"></hr>
                                 <br/>
-
-                                <h3 className="className=personalText"></h3>
-                                <br/>
                                 <br/>
 
                                 <div className="emptySpaceAbout"> </div>
