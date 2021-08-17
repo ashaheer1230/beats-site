@@ -35,7 +35,7 @@ export default function About (props) {
     
         return (
 
-            <div className="App">
+            <div className="nonScroll">
                 <div>
                     <nav className="NavbarItems">
                         <h1 className="navbar-logo">SHERU<i className="fas fa-record-vinyl"></i></h1>
@@ -78,6 +78,9 @@ export default function About (props) {
                         <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
+
+                    <div className="emptySpace"/>
+
                 </div>
 
                 <div className="column-rightAbout">

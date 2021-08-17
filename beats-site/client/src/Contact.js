@@ -82,6 +82,9 @@ export default function Contact (props) {
                             <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
+
+                    <div className="emptySpace"/>
+
                 </div>
 
                 <div className="column-rightContact">

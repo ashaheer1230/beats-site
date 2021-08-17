@@ -89,7 +89,7 @@ function App(props) {
       <div className="row">
 
         <div className="column-left">
-                      <div className="filterSection">
+                      <div className="filterSectionApp">
                         <br></br>
 
                         <h1 className="aboutTitles">newTorontoMusic</h1>
@@ -109,6 +109,7 @@ function App(props) {
                         <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
+                    <div className="emptySpace"/>
 
 
         </div>
