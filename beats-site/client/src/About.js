@@ -35,7 +35,7 @@ export default function About (props) {
     
         return (
 
-            <div className="nonScroll">
+            <div className="App">
                 <div>
                     <nav className="NavbarItems">
                         <h1 className="navbar-logo">SHERU<i className="fas fa-record-vinyl"></i></h1>
@@ -79,7 +79,6 @@ export default function About (props) {
 
                     </div>
 
-                    <div className="emptySpace"/>
 
                 </div>
 
@@ -117,6 +116,7 @@ export default function About (props) {
                                 <br/>
                                 <hr className="hr-line2"></hr>
                                 <br/>
+                                <h3 className="personalText">prodsheru@gmail.com</h3>
                                 <br/>
 
                                 <div className="emptySpaceAbout"> </div>
@@ -124,7 +124,6 @@ export default function About (props) {
                         </div>
 
                     </div>
-                    
                 </div>
                 
             </div>

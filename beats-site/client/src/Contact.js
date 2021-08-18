@@ -4,15 +4,25 @@ import { Button } from './Button.js';
 import { Pages } from './Pages';
 import igLogo from './iglogo.png';
 import mailLogo from './mailimg.png';
-import beatstars from './beatstars.jpeg';
+import {
+    Snackbar
+  } from '@material-ui/core';
 
 
 export default function Contact (props) {
 
     const [clicked, setClicked] = useState(false);
+    const [igClick, setIgClick] = useState(false);
 
     const handleClick = () => {
       setClicked(!clicked);
+    }
+
+    const handleMailClick = () => {
+        window.open("https://mail.google.com/mail/u/0/?fs=1&to=prodsheru@gmail.com&tf=cm");
+    }
+    const handleIgClick = () => {
+        setIgClick(true);
     }
   
     const switchPage = (index) => {
@@ -83,13 +93,11 @@ export default function Contact (props) {
 
                     </div>
 
-                    <div className="emptySpace"/>
-
                 </div>
 
                 <div className="column-rightContact">
                     
-                    <h1 className="personalTextHeading">Contact for Inquiries/Pricing</h1>
+                    <h1 className="personalTextHeading">Contact for Inquiries</h1>
                     <br/>
                     <h1 className="contactPrompt">(Press below to contact)</h1>
 
@@ -98,8 +106,9 @@ export default function Contact (props) {
                     <br/>
                     <br/>
                     <div className="contactImgDiv">
-                    <img src={mailLogo} alt="prodsheru@gmail.com" className="contactImg"></img>
-                    <img src={igLogo} alt="Coming Soon" className="contactImg"></img>
+                    
+                    <img src={mailLogo} alt="prodsheru@gmail.com" className="contactImg" onClick={() => handleMailClick()}></img>
+                    <img src={igLogo} alt="Coming Soon" className="contactImg" onClick={() => handleIgClick()}></img>
                     </div>
                     
                     
@@ -107,7 +116,18 @@ export default function Contact (props) {
                 
             </div>
 
-
+                {igClick && (
+                    <Snackbar
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
+                    open={igClick}
+                    autoHideDuration={3000}
+                    onClose={() => setIgClick(false)}
+                    message={'Coming Soon ;)'}
+                    />
+                )}
 
             </div>
         )

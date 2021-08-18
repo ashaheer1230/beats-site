@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './Navi.css';
 import './App.css';
+import './Navi.css';
 import Axios from 'axios';
 import musicImg from './musicImg.jpg';
 import { Button } from './Button.js';
@@ -64,7 +64,7 @@ function App(props) {
   }, [filename, tempo, key, scale, tempFile]);*/
 
   return (
-    <div className="App">
+    <div className="App" id={1}>
       
       <div>
           <nav className="NavbarItems">
@@ -109,7 +109,6 @@ function App(props) {
                         <h4 className="aboutHeadings"> (Coming Soon) </h4>
 
                     </div>
-                    <div className="emptySpace"/>
 
 
         </div>
