@@ -15,8 +15,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js">
+
+      var Parse = require('parse/node');
+      Parse.initialize("coCYo2bMg7Z52LoGnNFsZ7pautR5bKpQRGZNVman", "vx1iqHfNGOdVi3DBE1lf4iRk8pVt845pzPvPrMt7"); 
+
+      async function saveNewPerson() {
+        const Person = Parse.Object.extend("Person");
+        const person = new Person();
+
+        person.set("name", "John Snow");
+        person.set("age", 27);
+        try {
+          let result = await person.save()
+          alert('New object created with objectId: ' + result.id);
+          } catch(error) {
+              alert('Failed to create new object, with error code: ' + error.message);
+          }
+      } 
+
+      //Reading your First Data Object from Back4App
+      async function retrievePerson() {
+          const Person = Parse.Object.extend("Person");
+          const query = new Parse.Query(Person);
+          try {
+            const person = await query.get("mhPFDlCahj");
+            const name = person.get("name");
+            const age = person.get("age");
+          
+            alert(`Name: ${name} age: ${age}`);
+          } catch (error) {
+            alert(`Failed to retrieve the object, with error code: ${error.message}`);
+          }
+      }  
+
+      Parse.serverURL = "https://parseapi.back4app.com/";
+    </script>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

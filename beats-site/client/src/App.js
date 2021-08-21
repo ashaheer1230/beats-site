@@ -1,10 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import './App.css';
 import './Navi.css';
-import Axios from 'axios';
-import musicImg from './musicImg.jpg';
+import img1 from './img1.jpeg';
+import img2 from './img2.jpeg';
+import img3 from './img3.jpeg';
+import img4 from './img4.png';
+import img5 from './img5.jpeg';
+import img6 from './img6.jpeg';
 import { Button } from './Button.js';
 import { Pages } from './Pages';
+
+    var Parse = require('parse/node');
+    Parse.initialize("coCYo2bMg7Z52LoGnNFsZ7pautR5bKpQRGZNVman", "vx1iqHfNGOdVi3DBE1lf4iRk8pVt845pzPvPrMt7"); 
+    Parse.serverURL = "https://parseapi.back4app.com/";
 
 //const Spacer = require('react-spacer');
 
@@ -12,6 +20,15 @@ function App(props) {
 
   const [allBeats, setAllBeats] = useState([]);
   const [clicked, setClicked] = useState(false);
+
+  const imgArray = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6
+  ]
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -36,6 +53,30 @@ function App(props) {
     }
   }
 
+  async function retrieveBeats() {
+
+      const Beat = new Parse.Query("Beat");
+      const tempBeats = [];
+  
+      const results = await Beat.find();
+  
+      try {
+        for (const object of results) {
+          tempBeats.push(object.attributes);
+        }
+      } catch (error) {
+        console.log("ERROR while fetching 'Beats'" + error);
+      }
+  
+      const sorted = tempBeats.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  
+      if(sorted !== allBeats){
+        setAllBeats(sorted);
+      }
+
+  }
+
+  
   //Variables used to manually input music to DB
   /*const [filename, setfilename] = useState("Waves");
   const [tempo, setTempo] = useState(137);
@@ -45,9 +86,7 @@ function App(props) {
   
   useEffect(() => {
 
-    Axios.get("http://localhost:3001/api/get").then((response) => {
-      setAllBeats(response.data);
-    })
+    retrieveBeats();
 
   }, []);
 
@@ -120,20 +159,20 @@ function App(props) {
               <div className="beatCard">
 
                 <div flex={1}>
-                  <img src={musicImg} alt="Cant display" className="cardImg">
+                  <img src={imgArray[Math.floor(Math.random()*imgArray.length)]} alt="Cant display" className="cardImg">
                   </img>
                 </div>
 
-                <div flex={1}>
+                <div className="cardContent" flex={1}>
 
                   <h2 className="cardTextTitle">{val.Name}</h2>
                   <h5 className="cardText">{val.Tempo}bpm</h5>
                   <h5 className="cardText">{val.Key} {val.Scale}</h5>
 
                   <audio className="audioSlider" key={val.Name} controls controlsList="nodownload">
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/mpeg"></source>
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/wav"></source>
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.musicFile} type="audio/ogg"></source>
+                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/mpeg"></source>
+                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/wav"></source>
+                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/ogg"></source>
                     <p>Your browser does not support audio playback</p>
                   </audio>
                   

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.890de714.chunk.css",
+    "main.js": "/static/js/main.559e366b.chunk.js",
+    "main.js.map": "/static/js/main.559e366b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6a2651f1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6a2651f1.js.map",
+    "static/js/2.a36c77d8.chunk.js": "/static/js/2.a36c77d8.chunk.js",
+    "static/js/2.a36c77d8.chunk.js.map": "/static/js/2.a36c77d8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.890de714.chunk.css.map": "/static/css/main.890de714.chunk.css.map",
+    "static/js/2.a36c77d8.chunk.js.LICENSE.txt": "/static/js/2.a36c77d8.chunk.js.LICENSE.txt",
+    "static/media/iglogo.98ded4a6.png": "/static/media/iglogo.98ded4a6.png",
+    "static/media/img1.b75c791a.jpeg": "/static/media/img1.b75c791a.jpeg",
+    "static/media/img2.07e99bd8.jpeg": "/static/media/img2.07e99bd8.jpeg",
+    "static/media/img3.403b4ff4.jpeg": "/static/media/img3.403b4ff4.jpeg",
+    "static/media/img4.6072cb58.png": "/static/media/img4.6072cb58.png",
+    "static/media/img6.3ae7e5d8.jpeg": "/static/media/img6.3ae7e5d8.jpeg",
+    "static/media/mailimg.52601c09.png": "/static/media/mailimg.52601c09.png",
+    "static/media/musicImg.6cfadcdb.jpg": "/static/media/musicImg.6cfadcdb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a2651f1.js",
+    "static/js/2.a36c77d8.chunk.js",
+    "static/css/main.890de714.chunk.css",
+    "static/js/main.559e366b.chunk.js"
+  ]
+}

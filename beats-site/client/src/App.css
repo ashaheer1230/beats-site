@@ -107,15 +107,17 @@
     overflow-y: hidden;
 }
 
-.row {
-    
-}
-
 .row:after {
     content: "";
     display: table;
     clear: both;
     height: "100%vh";
+}
+
+
+.cardContent {
+    flex: 1;
+    padding-left: 10%;
 }
 
 
@@ -235,6 +237,13 @@
     .emptySpaceExtra{
         visibility: visible;
     }
+    
+}
+
+@media screen and (max-width: 500px){
+    .cardContent {
+        padding-left: 0px;
+    }
 }
 
 .filterSectionApp {
@@ -313,6 +322,7 @@
     overflow: auto;
 }
 
+
 .cardTextTitle {
     color: white;
     font-size: 50px;
@@ -326,8 +336,10 @@
 }
 
 .cardImg {
-    height: "100%vh";
-    width: 42%;
+    float: left;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
     border-radius: 1%;
 }
 
