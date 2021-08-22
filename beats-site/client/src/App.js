@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import './Navi.css';
 import img1 from './img1.jpeg';
@@ -13,6 +13,8 @@ import { Pages } from './Pages';
     var Parse = require('parse/node');
     Parse.initialize("coCYo2bMg7Z52LoGnNFsZ7pautR5bKpQRGZNVman", "vx1iqHfNGOdVi3DBE1lf4iRk8pVt845pzPvPrMt7"); 
     Parse.serverURL = "https://parseapi.back4app.com/";
+
+    
 
 //const Spacer = require('react-spacer');
 
@@ -53,7 +55,19 @@ function App(props) {
     }
   }
 
-  async function retrieveBeats() {
+  
+
+  
+  //Variables used to manually input music to DB
+  /*const [filename, setfilename] = useState("Waves");
+  const [tempo, setTempo] = useState(137);
+  const [key, setKey] = useState('E');
+  const [scale, setScale] = useState('Minor');
+  const [tempFile, setTempFile] = useState('1KCYiJMSK4TW8X8-1jmp6nu8OkAzwzoq_');*/
+  
+  useEffect(() => {
+
+    async function retrieveBeats() {
 
       const Beat = new Parse.Query("Beat");
       const tempBeats = [];
@@ -70,21 +84,9 @@ function App(props) {
   
       const sorted = tempBeats.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   
-      if(sorted !== allBeats){
         setAllBeats(sorted);
-      }
-
-  }
-
   
-  //Variables used to manually input music to DB
-  /*const [filename, setfilename] = useState("Waves");
-  const [tempo, setTempo] = useState(137);
-  const [key, setKey] = useState('E');
-  const [scale, setScale] = useState('Minor');
-  const [tempFile, setTempFile] = useState('1KCYiJMSK4TW8X8-1jmp6nu8OkAzwzoq_');*/
-  
-  useEffect(() => {
+    }
 
     retrieveBeats();
 

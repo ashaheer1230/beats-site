@@ -21,36 +21,6 @@
 
       var Parse = require('parse/node');
       Parse.initialize("coCYo2bMg7Z52LoGnNFsZ7pautR5bKpQRGZNVman", "vx1iqHfNGOdVi3DBE1lf4iRk8pVt845pzPvPrMt7"); 
-
-      async function saveNewPerson() {
-        const Person = Parse.Object.extend("Person");
-        const person = new Person();
-
-        person.set("name", "John Snow");
-        person.set("age", 27);
-        try {
-          let result = await person.save()
-          alert('New object created with objectId: ' + result.id);
-          } catch(error) {
-              alert('Failed to create new object, with error code: ' + error.message);
-          }
-      } 
-
-      //Reading your First Data Object from Back4App
-      async function retrievePerson() {
-          const Person = Parse.Object.extend("Person");
-          const query = new Parse.Query(Person);
-          try {
-            const person = await query.get("mhPFDlCahj");
-            const name = person.get("name");
-            const age = person.get("age");
-          
-            alert(`Name: ${name} age: ${age}`);
-          } catch (error) {
-            alert(`Failed to retrieve the object, with error code: ${error.message}`);
-          }
-      }  
-
       Parse.serverURL = "https://parseapi.back4app.com/";
     </script>
     <!--
