@@ -49,7 +49,6 @@
     display: flex;
     flex-direction: column;
     border-top: 2px white solid;
-    border-right: 2px white solid;
     background-color: black;
     
 }
@@ -80,6 +79,7 @@
     background: rgb(3,0,54);
     background: linear-gradient(90deg, rgba(7,4,88,255) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
     border-top: 2px solid white;
+    border-left: 2px solid white;
 }
 
 .columnImg {
@@ -89,7 +89,6 @@
     color: rgb(255, 255, 255);
     border-left: 2px solid white;
     border-top: 2px solid white;
-    border-right: 2px solid white;
     padding-top: 0px;
     overflow-y: hidden;
 }
@@ -117,7 +116,15 @@
 
 .cardContent {
     flex: 1;
-    padding-left: 10%;
+    padding-left: 2%;
+}
+
+.terms {
+    display: flex;
+    height: "100%vh";
+    align-content: center;
+    justify-content: center;
+
 }
 
 
@@ -168,10 +175,14 @@
 
     .column-rightAbout {
         width: 100%;
+        border-right: 2px white;
+        border-bottom: 2px solid white;
     }
 
     .column-rightContact {
         width: 100%;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
     }
 
     .NavbarItems{
@@ -319,6 +330,7 @@
     text-align: left;
     border-top: solid 2px white;
     border-right: solid 2px white;
+    border-left: solid 2px white;
     overflow: auto;
 }
 
@@ -341,11 +353,13 @@
     width: 200px;
     height: 200px;
     border-radius: 1%;
+    border: 2px solid white;
 }
 
 .aboutImg {
     width: 100%;
     border-bottom: 2px solid white;
+    border-right: 2px solid white;
 }
 
 .contactImg{

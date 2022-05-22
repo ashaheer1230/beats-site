@@ -22,7 +22,8 @@ export default function Contact (props) {
         window.open("https://mail.google.com/mail/u/0/?fs=1&to=prodsheru@gmail.com&tf=cm");
     }
     const handleIgClick = () => {
-        setIgClick(true);
+        //setIgClick(true);
+        window.open("https://instagram.com/ayosheru?utm_medium=copy_link");
     }
   
     const switchPage = (index) => {
@@ -71,27 +72,36 @@ export default function Contact (props) {
             <div className="row">
 
                 <div className="column-left">
-                    <div className="filterSection">
-                            <br></br>
+                    <div className="filterSectionApp">
+                        <br></br>
 
-                            <h1 className="aboutTitles">newTorontoMusic</h1>
+                        <h1 className="aboutTitles">5 Sounds 5 Beats</h1>
 
-                            <br></br>
-                            <br></br>
+                        <br></br>
+                        <hr></hr>
+                        <br></br>
+                        <br></br>
 
-                            <h4 className="aboutHeadings">newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
+                        <h4 className="aboutHeadings">All beats listed are free to use</h4>
+                        <br></br>
+                        <h4 className="aboutHeadings">Contact for stems, wavs, and mp3s</h4>
 
-                            <br></br>
-                            <br/>
+                        <br></br>
+                        <br/>
+                        <br/>
 
-                            <br/>
+                        <hr></hr>
+                        <br/>
 
-
-                            <h2 className="aboutTitles">Producers: </h2>
-                            <br></br>
-                            <h4 className="aboutHeadings"> (Coming Soon) </h4>
-
-                    </div>
+                        <h2 className="aboutTitles">Exclusive Beats</h2>
+                        <br></br>
+                        <hr></hr>
+                        <br/>
+                        <h4 className="aboutHeadings">Contact for Exclusive Beats</h4>
+                        <br/>
+                        <h4 className="aboutHeadings">prodsheru@gmail.com</h4>
+ 
+                      </div>
 
                 </div>
 
@@ -108,7 +118,7 @@ export default function Contact (props) {
                     <div className="contactImgDiv">
                     
                     <img src={mailLogo} alt="prodsheru@gmail.com" className="contactImg" onClick={() => handleMailClick()}></img>
-                    <img src={igLogo} alt="Coming Soon" className="contactImg" onClick={() => handleIgClick()}></img>
+                    <img src={igLogo} alt="ayosheru" className="contactImg" onClick={() => handleIgClick()}></img>
                     </div>
                     
                     

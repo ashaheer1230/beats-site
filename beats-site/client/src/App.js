@@ -1,12 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import './Navi.css';
-import img1 from './img1.jpeg';
-import img2 from './img2.jpeg';
-import img3 from './img3.jpeg';
-import img4 from './img4.png';
-import img5 from './img5.jpeg';
-import img6 from './img6.jpeg';
+import img1 from './img1.jpg';
+import img2 from './img2.jpg';
+import img3 from './img3.jpg';
+import img4 from './img4.jpg';
+import img5 from './img5.png';
+import beat1 from './Audio/distance.mp3'
+import beat2 from './Audio/wild.mp3'
+import beat4 from './Audio/noise.wav'
+import beat3 from './Audio/ot.wav'
+import beat5 from './Audio/fresh.wav'
+import beat6 from './Audio/glass.wav'
 import { Button } from './Button.js';
 import { Pages } from './Pages';
 
@@ -28,8 +33,16 @@ function App(props) {
     img2,
     img3,
     img4,
-    img5,
-    img6
+    img5
+  ]
+
+  const beatArray = [
+    beat1,
+    beat2,
+    beat3,
+    beat4,
+    beat5,
+    beat6
   ]
 
   const handleClick = () => {
@@ -82,7 +95,7 @@ function App(props) {
         console.log("ERROR while fetching 'Beats'" + error);
       }
   
-      const sorted = tempBeats.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const sorted = tempBeats.sort((a, b) => new Date(a.beatNum) - new Date(b.beatNum));
   
         setAllBeats(sorted);
   
@@ -126,30 +139,40 @@ function App(props) {
                </ul>
           </nav>
       </div>
-
+      
       <div className="row">
 
         <div className="column-left">
                       <div className="filterSectionApp">
                         <br></br>
 
-                        <h1 className="aboutTitles">newTorontoMusic</h1>
+                        <h1 className="aboutTitles">5 Sounds 5 Beats</h1>
 
+                        <br></br>
+                        <hr></hr>
                         <br></br>
                         <br></br>
 
-                        <h4 className="aboutHeadings">newTorontoMusic is a production group aiming to shape the sound of the next generation of Toronto music.</h4>
+                        <h4 className="aboutHeadings">All beats listed are free to use</h4>
+                        <br></br>
+                        <h4 className="aboutHeadings">Contact for stems, wavs, and mp3s</h4>
 
                         <br></br>
                         <br/>
                         <br/>
 
+                        <hr></hr>
+                        <br/>
 
-                        <h2 className="aboutTitles">Producers: </h2>
+                        <h2 className="aboutTitles">Exclusive Beats</h2>
                         <br></br>
-                        <h4 className="aboutHeadings"> (Coming Soon) </h4>
-
-                    </div>
+                        <hr></hr>
+                        <br/>
+                        <h4 className="aboutHeadings">Contact for Exclusive Beats</h4>
+                        <br/>
+                        <h4 className="aboutHeadings">prodsheru@gmail.com</h4>
+ 
+                      </div>
 
 
         </div>
@@ -158,10 +181,10 @@ function App(props) {
           {allBeats.map((val) => {
           
             return (
-              <div className="beatCard">
+              <div className="beatCard" key={val.Name}>
 
                 <div flex={1}>
-                  <img src={imgArray[Math.floor(Math.random()*imgArray.length)]} alt="Cant display" className="cardImg">
+                  <img src={imgArray[val.Img - 1]} alt="Cant display" className="cardImg">
                   </img>
                 </div>
 
@@ -172,9 +195,9 @@ function App(props) {
                   <h5 className="cardText">{val.Key} {val.Scale}</h5>
 
                   <audio className="audioSlider" key={val.Name} controls controlsList="nodownload">
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/mpeg"></source>
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/wav"></source>
-                    <source src={"https://docs.google.com/uc?export=download&id=" + val.Path} type="audio/ogg"></source>
+                    <source src={beatArray[val.beatNum - 1]} type="audio/mpeg"></source>
+                    <source src={beatArray[val.beatNum - 1]} type="audio/wav"></source>
+                    <source src={beatArray[val.beatNum - 1]} type="audio/ogg"></source>
                     <p>Your browser does not support audio playback</p>
                   </audio>
                   
