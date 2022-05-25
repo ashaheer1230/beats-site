@@ -1,10 +1,10 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Manrope', sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .nonScroll {
@@ -20,7 +20,7 @@
     flex-grow: 1;
     width: 100%;
     height: 100vh;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);
 }
 
@@ -28,7 +28,7 @@
     flex-grow: 1;
     width: 100%;
     height: 100vh;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     background-color: rgb(0, 0, 0);
     visibility: hidden;
 }
@@ -37,8 +37,8 @@
     flex-grow: 1;
     width: 100%;
     height: 100vh;
-    color: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
-    background-color: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    color: linear-gradient(90deg, rgba(3, 0, 54, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(3, 0, 54, 1) 100%);
+    background-color: linear-gradient(90deg, rgba(3, 0, 54, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(3, 0, 54, 1) 100%);
 }
 
 .column-left {
@@ -50,7 +50,7 @@
     flex-direction: column;
     border-top: 2px white solid;
     background-color: black;
-    
+
 }
 
 .column-right {
@@ -76,8 +76,8 @@
     text-align: center;
     color: white;
     overflow-y: hidden;
-    background: rgb(3,0,54);
-    background: linear-gradient(90deg, rgba(7,4,88,255) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    background: rgb(3, 0, 54);
+    background: linear-gradient(90deg, rgba(7, 4, 88, 255) 0%, rgba(9, 9, 121, 1) 39%, rgba(3, 0, 54, 1) 100%);
     border-top: 2px solid white;
     border-left: 2px solid white;
 }
@@ -85,7 +85,7 @@
 .columnImg {
     width: 35%;
     float: left;
-    background: linear-gradient(90deg, rgba(7,4,88,255) 0, rgba(11,7,108,255) 100%);
+    background: linear-gradient(90deg, rgba(7, 4, 88, 255) 0, rgba(11, 7, 108, 255) 100%);
     color: rgb(255, 255, 255);
     border-left: 2px solid white;
     border-top: 2px solid white;
@@ -93,7 +93,7 @@
     overflow-y: hidden;
 }
 
-.columnInfo{
+.columnInfo {
     text-align: left;
     padding: 20px;
     padding-top: 50px;
@@ -101,7 +101,7 @@
     border-top: 2px solid white;
     float: right;
     width: 65%;
-    background: linear-gradient(90deg, rgba(11,7,108,255) 0%, rgba(9,9,121,1) 25%, rgba(3,0,54,1) 100%);
+    background: linear-gradient(90deg, rgba(11, 7, 108, 255) 0%, rgba(9, 9, 121, 1) 25%, rgba(3, 0, 54, 1) 100%);
     color: rgb(255, 255, 255);
     overflow-y: hidden;
 }
@@ -128,28 +128,29 @@
 }
 
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 960px) {
 
     * {
         overflow-x: visible;
         overflow-y: visible;
     }
+
     .filterSectionApp {
         visibility: hidden;
         width: 100%;
         height: "100%vh";
-        background: rgb(0,0,0);
+        background: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
         text-align: center;
         padding: 10px;
         overflow-wrap: break-word;
         white-space: normal;
     }
-    
+
     .filterSection {
         visibility: hidden;
         width: 100%;
-        background: rgb(0,0,0);
+        background: rgb(0, 0, 0);
         color: rgb(255, 255, 255);
         text-align: center;
         padding: 10px;
@@ -185,7 +186,7 @@
         border-bottom: 2px solid white;
     }
 
-    .NavbarItems{
+    .NavbarItems {
         position: relative;
     }
 
@@ -202,7 +203,7 @@
         margin-top: 0;
     }
 
-    .nav-menu.active{
+    .nav-menu.active {
         background: #001c7a;
         left: 0;
         opacity: 1;
@@ -245,13 +246,13 @@
         font-size: 2rem;
     }
 
-    .emptySpaceExtra{
+    .emptySpaceExtra {
         visibility: visible;
     }
-    
+
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     .cardContent {
         padding-left: 0px;
     }
@@ -260,7 +261,7 @@
 .filterSectionApp {
     width: 100%;
     height: "100%vh";
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
@@ -270,7 +271,7 @@
 
 .filterSection {
     width: 100%;
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-align: center;
     padding: 10px;
@@ -308,7 +309,7 @@
 .aboutSection {
     width: 100%;
     height: "100%vh";
-    background: linear-gradient(90deg, rgba(6,5,88,255) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    background: linear-gradient(90deg, rgba(6, 5, 88, 255) 0%, rgba(9, 9, 121, 1) 39%, rgba(3, 0, 54, 1) 100%);
     color: rgb(255, 255, 255);
     text-align: center;
     border: 2px solid black;
@@ -319,8 +320,8 @@
 }
 
 .beatCard {
-    background: rgb(3,0,54);
-    background: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 39%, rgba(3,0,54,1) 100%);
+    background: rgb(3, 0, 54);
+    background: linear-gradient(90deg, rgba(3, 0, 54, 1) 0%, rgba(9, 9, 121, 1) 39%, rgba(3, 0, 54, 1) 100%);
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -340,6 +341,15 @@
     font-size: 50px;
 }
 
+.cardTextTitle-active {
+    color: orange;
+}
+
+.cardTextTitle:hover {
+    cursor: pointer;
+    color: gray;
+}
+
 .cardText {
     color: white;
     font-size: 15px;
@@ -354,6 +364,7 @@
     height: 200px;
     border-radius: 1%;
     border: 2px solid white;
+    cursor: pointer;
 }
 
 .aboutImg {
@@ -362,7 +373,7 @@
     border-right: 2px solid white;
 }
 
-.contactImg{
+.contactImg {
     width: 40%;
 }
 
@@ -380,14 +391,15 @@
     font-family: 'Josefin Sans', sans-serif;
     font-size: 26px;
 }
+
 .contactPrompt {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
 }
 
 .NavbarItems {
-    background: rgb(3,0,54);
-    background: linear-gradient(90deg, rgba(3,0,54,1) 0%, rgba(9,9,121,1) 59%, rgba(3,0,54,1) 100%);
+    background: rgb(3, 0, 54);
+    background: linear-gradient(90deg, rgba(3, 0, 54, 1) 0%, rgba(9, 9, 121, 1) 59%, rgba(3, 0, 54, 1) 100%);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -396,7 +408,7 @@
 
 }
 
-.navbar-logo{
+.navbar-logo {
     color: #FFFFFF;
     justify-self: start;
     margin-left: 20px;
@@ -421,13 +433,13 @@
     margin-top: 20px;
 }
 
-.nav-links{
+.nav-links {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
 
-.nav-links:hover{
+.nav-links:hover {
     background-color: #0038c2;
     border-radius: 4px;
     transition: all 0.2s ease-out;
@@ -437,6 +449,6 @@
     color: #FFFFFF;
 }
 
-.menu-icon{
+.menu-icon {
     display: none;
 }
